@@ -20,4 +20,5 @@ if(NOT WIN32)
     set_target_properties(${output_target} PROPERTIES LINK_FLAGS -Wl,-rpath,'\$ORIGIN')
 else()
     add_compile_options("/EHsc")
+    copy_required_dlls(${output_target}) # Required by diligent
 endif()
