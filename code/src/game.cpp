@@ -60,7 +60,6 @@ namespace my_game {
 
 		rawrbox::RESOURCES::loadListAsync(initialContentFiles, [this]() {
 			rawrbox::runOnRenderThread([this]() {
-				rawrbox::BindlessManager::processBarriers(); // IMPORTANT: BARRIERS NEED TO BE PROCESSED AFTER LOADING ALL THE CONTENT
 				this->contentLoaded();
 			});
 		});
@@ -92,6 +91,7 @@ namespace my_game {
 			this->_model.reset();
 
 			rawrbox::RESOURCES::shutdown();
+			rawrbox::ASYNC::shutdown();
 		}
 	}
 
