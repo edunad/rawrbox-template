@@ -91,7 +91,6 @@ namespace my_game {
 			this->_model.reset();
 
 			rawrbox::RESOURCES::shutdown();
-			rawrbox::ASYNC::shutdown();
 		}
 	}
 
