@@ -34,7 +34,7 @@ namespace my_game {
 		render->setDrawCall([this](const rawrbox::DrawPass& pass) {
 			if (pass == rawrbox::DrawPass::PASS_OVERLAY) {
 				this->drawOverlay();
-			} else if (pass == rawrbox::DrawPass::PASS_OPAQUE) {
+			} else if (pass == rawrbox::DrawPass::PASS_WORLD) {
 				this->drawWorld();
 			}
 		});
